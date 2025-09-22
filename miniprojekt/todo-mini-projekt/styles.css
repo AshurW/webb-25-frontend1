@@ -1,0 +1,7 @@
+li.done {
+    text-decoration: line-through;
+}
+
+.list-container {
+    background-color: red;
+}
