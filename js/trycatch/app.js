@@ -38,8 +38,30 @@
 //     console.log("ReferenceError:", error.message);
 //   }
 
-try {
-  console.log('hej'")
-} catch (error) {
-  console.log("SyntaxError:", error.message);
-}
+// try {
+//   eval("console.log('hej'"); // Saknar stängande parentes
+// } catch (error) {
+//   console.log("SyntaxError:", error.message);
+// }
+
+
+function validateAge(age) {
+    try {
+      if (isNaN(age)) {
+        throw new Error("Ålder måste vara ett nummer");
+      }
+      if (age < 0) {
+        throw new Error("Ålder kan inte vara negativ");
+      }
+      if (age > 150) {
+        throw new Error("Ålder verkar orimlig");
+      }
+      return `Du är ${age} år gammal`;
+    } catch (error) {
+      return `Fel: ${error.message}`;
+    }
+  }
+  
+  console.log(validateAge(25)); // "Du är 25 år gammal"
+  console.log(validateAge("abc")); // "Fel: Ålder måste vara ett nummer"
+  
