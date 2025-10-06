@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-server-examples",
+  "version": "1.0.0",
+  "description": "Examples and exercises for learning Node.js server development",
+  "main": "simple-live-server.js",
+  "scripts": {
+    "start": "node simple-live-server.js",
+    "basic": "node basic-server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "server",
+    "http",
+    "live-reload",
+    "static-files",
+    "tutorial"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

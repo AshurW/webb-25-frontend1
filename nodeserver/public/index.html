@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Live Server Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Node.js Live Server Demo</h1>
+            <p>This page is being served by our custom Node.js server!</p>
+        </header>
+
+        <main>
+            <section class="features">
+                <h2>✨ Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>📁 Static File Serving</h3>
+                        <p>Serves HTML, CSS, JS, and image files</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🔄 Live Reload</h3>
+                        <p>Automatically refreshes when files change</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🎨 MIME Type Detection</h3>
+                        <p>Properly handles different file types</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🛡️ Security</h3>
+                        <p>Prevents directory traversal attacks</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo">
+                <h2>🎮 Interactive Demo</h2>
+                <div class="demo-content">
+                    <button id="demo-btn" class="demo-button">Click Me!</button>
+                    <div id="demo-output" class="demo-output"></div>
+                </div>
+            </section>
+
+            <section class="instructions">
+                <h2>📚 How to Use</h2>
+                <ol>
+                    <li>Edit this HTML file and save it</li>
+                    <li>Watch the page automatically reload!</li>
+                    <li>Try editing the CSS file too</li>
+                    <li>Add your own JavaScript files</li>
+                </ol>
+            </section>
+
+            <section class="file-list">
+                <h2>📂 Available Files</h2>
+                <ul>
+                    <li><a href="/index.html">index.html</a> - This page</li>
+                    <li><a href="/style.css">style.css</a> - Stylesheet</li>
+                    <li><a href="/script.js">script.js</a> - JavaScript</li>
+                    <li><a href="/api/data">/api/data</a> - API endpoint</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ using Node.js</p>
+            <p>Check the console to see live reload messages!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
