@@ -675,3 +675,4 @@ Denna kunskap bildar grunden för att bygga mer komplexa webbapplikationer och A
 - [MDN Web Docs - HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
 - [Express.js Framework](https://expressjs.com/)
 - [Socket.io för Realtidskommunikation](https://socket.io/)
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmbibliotek - Upptäck fantastiska filmer</title>
+    <meta name="description" content="Bläddra bland tusentals filmer och spara dina favoriter">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- JavaScript Module -->
+    <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+    <!-- Header med navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🎬 Filmbibliotek</h1>
+                
+                <nav class="main-nav" aria-label="Huvudnavigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Hem</a></li>
+                        <li><a href="favorites.html" class="nav-link">
+                            Favoriter <span class="favorites-count">0</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero-sektion -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+            <h2 id="hero-title">Upptäck fantastiska filmer</h2>
+            <p class="hero-subtitle">Tusentals filmer att utforska</p>
+        </div>
+    </section>
+
+    <!-- Sökfält och filter -->
+    <section class="search-section">
+        <div class="container">
+            <form class="search-form" id="searchForm" role="search">
+                <div class="search-wrapper">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Sök efter filmer..."
+                        aria-label="Sök efter filmer"
+                    >
+                    <button type="submit" class="search-btn" aria-label="Sök">
+                        🔍
+                    </button>
+                </div>
+            </form>
+
+            <!-- Genre-filter -->
+            <div class="filter-section">
+                <label for="genreFilter" class="filter-label">Filtrera efter genre:</label>
+                <select id="genreFilter" class="genre-select">
+                    <option value="">Alla genrer</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Komedi</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Skräck</option>
+                    <option value="scifi">Sci-Fi</option>
+                    <option value="romance">Romantik</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Huvudinnehåll -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Loading spinner -->
+            <div class="loading-spinner" id="loadingSpinner" aria-live="polite" aria-busy="true">
+                <div class="spinner"></div>
+                <p>Laddar filmer...</p>
+            </div>
+
+            <!-- Felmeddelande -->
+            <div class="error-message" id="errorMessage" role="alert" aria-live="assertive">
+                <p class="error-text"></p>
+                <button class="retry-btn" id="retryBtn">Försök igen</button>
+            </div>
+
+            <!-- Filmgalleri -->
+            <section class="movies-section" aria-labelledby="movies-title">
+                <h2 id="movies-title">Populära filmer</h2>
+                <div class="movies-grid" id="moviesGrid">
+                    <!-- Filmkort genereras dynamiskt här -->
+                </div>
+            </section>
+
+            <!-- Load more-knapp -->
+            <div class="load-more-section">
+                <button class="btn btn-primary" id="loadMoreBtn">Ladda fler filmer</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Filmbibliotek. Skapad med ❤️ i Frontend 1-kursen</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Om oss</a>
+                <a href="#" class="footer-link">Kontakt</a>
+                <a href="#" class="footer-link">Integritet</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal för filmdetaljer -->
+    <div class="modal" id="movieModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Stäng modal">×</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Innehåll läggs in dynamiskt -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

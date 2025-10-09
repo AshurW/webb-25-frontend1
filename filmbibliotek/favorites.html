@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina favoriter - Filmbibliotek</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- JavaScript Module -->
+    <script type="module" src="js/favorites.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🎬 Filmbibliotek</h1>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Hem</a></li>
+                        <li><a href="favorites.html" class="nav-link active">
+                            Favoriter <span class="favorites-count">0</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="favorites-section">
+                <h2>Mina Favoritfilmer</h2>
+                
+                <!-- Tomt state -->
+                <div class="empty-state" id="emptyState">
+                    <p class="empty-icon">📽️</p>
+                    <h3>Inga favoriter ännu</h3>
+                    <p>Börja lägga till filmer genom att klicka på hjärtikonen!</p>
+                    <a href="index.html" class="btn btn-primary">Bläddra bland filmer</a>
+                </div>
+
+                <!-- Favoritfilmer -->
+                <div class="movies-grid" id="favoritesGrid">
+                    <!-- Favoritfilmer läggs in här -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Filmbibliotek. Skapad med ❤️ i Frontend 1-kursen</p>
+        </div>
+    </footer>
+</body>
+</html>

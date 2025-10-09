@@ -1,0 +1,23 @@
+{
+  "name": "filmbibliotek",
+  "version": "1.0.0",
+  "description": "En fullständig filmbibliotek-webbplats byggd med HTML, CSS och JavaScript",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "film",
+    "bibliotek",
+    "frontend",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Frontend 1 Student",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

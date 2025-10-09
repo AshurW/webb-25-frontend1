@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmdetaljer - Filmbibliotek</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- JavaScript Module -->
+    <script type="module" src="js/movie-details.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🎬 Filmbibliotek</h1>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Hem</a></li>
+                        <li><a href="favorites.html" class="nav-link">
+                            Favoriter <span class="favorites-count">0</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Loading spinner -->
+            <div class="loading-spinner active" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Laddar film...</p>
+            </div>
+
+            <!-- Felmeddelande -->
+            <div class="error-message" id="errorMessage" role="alert">
+                <p class="error-text">Film hittades inte</p>
+                <a href="index.html" class="btn btn-primary">Tillbaka till start</a>
+            </div>
+
+            <!-- Filmdetaljer -->
+            <article class="movie-details" id="movieDetails">
+                <button class="back-btn" id="backBtn" aria-label="Tillbaka">
+                    ← Tillbaka
+                </button>
+
+                <div class="movie-details-grid">
+                    <!-- Vänster kolumn: Poster -->
+                    <div class="movie-details-poster">
+                        <img 
+                            id="moviePoster" 
+                            src="" 
+                            alt="Film poster" 
+                            class="details-poster-img"
+                        >
+                    </div>
+
+                    <!-- Höger kolumn: Information -->
+                    <div class="movie-details-info">
+                        <h1 id="movieTitle" class="details-title"></h1>
+                        
+                        <div class="details-meta">
+                            <span class="meta-item" id="movieRating"></span>
+                            <span class="meta-item" id="movieYear"></span>
+                            <span class="meta-item" id="movieRuntime"></span>
+                        </div>
+
+                        <div class="details-genres" id="movieGenres">
+                            <!-- Genrer läggs in här -->
+                        </div>
+
+                        <div class="details-actions">
+                            <button class="btn btn-primary favorite-detail-btn" id="favoriteBtn">
+                                🤍 Lägg till favorit
+                            </button>
+                            <button class="btn btn-secondary share-btn" id="shareBtn">
+                                🔗 Dela
+                            </button>
+                        </div>
+
+                        <section class="details-section">
+                            <h2>Handling</h2>
+                            <p id="movieOverview" class="details-overview"></p>
+                        </section>
+
+                        <section class="details-section">
+                            <h2>Detaljer</h2>
+                            <dl class="details-list">
+                                <dt>Regissör:</dt>
+                                <dd id="movieDirector"></dd>
+                                
+                                <dt>Skådespelare:</dt>
+                                <dd id="movieCast"></dd>
+                                
+                                <dt>Premiär:</dt>
+                                <dd id="movieReleaseDate"></dd>
+                            </dl>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Filmbibliotek. Skapad med ❤️ i Frontend 1-kursen</p>
+        </div>
+    </footer>
+</body>
+</html>
